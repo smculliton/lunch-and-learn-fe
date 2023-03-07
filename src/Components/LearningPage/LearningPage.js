@@ -17,8 +17,6 @@ function LearningPage() {
       })
   }, [])
 
-  console.log(video)
-
   return(
     <>
       <h1>{formattedKeyword}</h1>
