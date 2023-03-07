@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
 import RecipeCard from '../RecipeCard/RecipeCard'
@@ -6,6 +7,7 @@ import RecipeCard from '../RecipeCard/RecipeCard'
 function SearchPage() {
   const [results, setResults] = useState([])
   const { keyword } = useParams()
+  const formattedKeyword = keyword[0].toUpperCase() + keyword.slice(1).toLowerCase()
 
   useEffect(() => {
     fetch(`http://localhost:4000/api/v1/recipes?country=${keyword}`)
@@ -19,6 +21,8 @@ function SearchPage() {
 
   return (
     <>
+      <h2>{formattedKeyword} Recipes</h2>
+      <Link to={`/country/${keyword}`}><button>Learn About {formattedKeyword}</button></Link>
       {results}
     </>
   )
