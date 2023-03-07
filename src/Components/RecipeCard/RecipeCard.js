@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import savedTrue from '../images/starred.png'
-import savedFalse from '../images/unstarredDark.png'
+import savedTrue from '../../images/starred.png'
+import savedFalse from '../../images/unstarredDark.png'
 
-function Recipe({info}) {
+function RecipeCard({info}) {
   const [saved, setSaved] = useState(false)
 
   const toggleSaved = () => {
@@ -27,4 +27,4 @@ function Recipe({info}) {
 }
 
 
-export default Recipe 
+export default RecipeCard

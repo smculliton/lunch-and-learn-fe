@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css';
-import Recipe from './Components/Recipe'
+import RecipeCard from '../RecipeCard/RecipeCard'
 
 function App() {
   const [search, setSearch] = useState('')
@@ -21,7 +21,7 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setResults(
-          data.data.map(d => <Recipe info={d.attributes} />)
+          data.data.map(d => <RecipeCard info={d.attributes} />)
         )
       })
     clearSearch()
