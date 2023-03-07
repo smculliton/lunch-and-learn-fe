@@ -6,6 +6,7 @@ import React from 'react'
 import Layout from '../Layout/Layout'
 import HomePage from '../HomePage/HomePage';
 import SearchPage from '../SearchPage/SearchPage';
+import LearningPage from '../LearningPage/LearningPage';
 import NotFound from '../NotFound/NotFound';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Route path='/' element={<Layout />} >
       <Route path='/' element={<HomePage />} />
       <Route path='/search/:keyword' element={<SearchPage />} />
+      <Route path='/country/:keyword' element={<LearningPage />} />
       <Route path='*' element={<NotFound />} />
     </Route>
   </Routes>
