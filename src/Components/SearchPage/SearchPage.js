@@ -6,11 +6,11 @@ import Header from '../Header/Header'
 
 function SearchPage() {
   const [results, setResults] = useState([])
-  const search = useParams()
-  console.log(search)
+  const { keyword } = useParams()
+  console.log(keyword)
 
   const handleSubmit = () => {
-    fetch(`http://localhost:4000/api/v1/recipes?country=${search}`)
+    fetch(`http://localhost:4000/api/v1/recipes?country=${keyword}`)
       .then(response => response.json())
       .then(data => {
         setResults(
