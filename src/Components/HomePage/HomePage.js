@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import './App.css';
-import Recipe from './Components/Recipe'
+import { Link, useNavigate } from 'react-router-dom'
 
-function App() {
+import Header from '../Header/Header'
+
+function HomePage() {
   const [search, setSearch] = useState('')
-  const [results, setResults] = useState([])
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setSearch(e.target.value)
@@ -12,19 +13,9 @@ function App() {
 
   const handleKeyDown = (e) => {
     if (e.code === 'Enter') {
-      handleSubmit()
+      navigate(`/search/${search}`)
+      clearSearch()
     }
-  }
-
-  const handleSubmit = () => {
-    fetch(`http://localhost:4000/api/v1/recipes?country=${search}`)
-      .then(response => response.json())
-      .then(data => {
-        setResults(
-          data.data.map(d => <Recipe info={d.attributes} />)
-        )
-      })
-    clearSearch()
   }
 
   const clearSearch = () => {
@@ -33,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <h1>Lunch and Learn</h1>
+      {/* <Header /> */}
       <label>
         Search:
         <input 
@@ -44,10 +35,9 @@ function App() {
           onKeyDown={event => handleKeyDown(event)}
         />
       </label>
-      <button onClick={handleSubmit}>Search</button>
-      {results}
+      <Link to={`/search/${search}`}><button>Submit</button></Link>
     </div>
   );
 }
 
-export default App;
+export default HomePage;
