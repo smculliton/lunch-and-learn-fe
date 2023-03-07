@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import savedTrue from '../images/starred.png'
+import savedFalse from '../images/unstarredDark.png'
 
 function Recipe({info}) {
-  console.log(info.title)
+  const [saved, setSaved] = useState(false)
+
+  const toggleSaved = () => {
+    setSaved(!saved)
+  }
+
   return (
     <div>
       <h2>
@@ -10,6 +17,10 @@ function Recipe({info}) {
         <a href={info.url}>
           {info.title}
         </a>
+        <img 
+          src={saved ? savedTrue : savedFalse}
+          onClick={toggleSaved}
+        />
       </h2>
     </div>
   )
