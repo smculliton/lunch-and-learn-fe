@@ -24,7 +24,7 @@ function HomePage() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <label>
         Search:
         <input 
