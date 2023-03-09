@@ -20,11 +20,13 @@ function SearchPage() {
   }, [])
 
   return (
-    <>
+    <div>
       <h2>{formattedKeyword} Recipes</h2>
       <Link to={`/country/${keyword}`}><button>Learn About {formattedKeyword}</button></Link>
-      {results}
-    </>
+      <div className='search-container'>
+        {results}
+      </div>
+    </div>
   )
 }
 

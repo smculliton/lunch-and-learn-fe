@@ -13,7 +13,7 @@ function RecipeCard({info}) {
   return (
     <div>
       <h2>
-        <div className='recipe-card'>
+        <div className='recipe-container'>
           <img 
             className='favorite-star'
             src={saved ? savedTrue : savedFalse}
