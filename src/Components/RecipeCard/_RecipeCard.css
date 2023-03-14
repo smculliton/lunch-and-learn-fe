@@ -1,16 +1,19 @@
 .favorite-star {
-  width: auto;
-  height: 4%;
+  align-items: left;
   position: absolute;
-  margin-left: 10px;
   margin-top: 10px;
   cursor: pointer;
   z-index: 5;
+  color: gold
+}
+
+.fav-star-icon {
+  size: 100em;
 }
 
 .recipe-container {
   width: 20rem;
-  height: 30rem;
+  height: 25rem;
   padding: 20px;
   align-items: center;
   transition: 0.3s;
@@ -23,8 +26,4 @@
 
 .recipe-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
 }
