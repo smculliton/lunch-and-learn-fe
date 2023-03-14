@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import savedTrue from '../../images/starred.png'
 import savedFalse from '../../images/unstarredDark.png'
-import './_RecipeCard.scss'
+import './_RecipeCard.css'
 
 function RecipeCard({info}) {
   const [saved, setSaved] = useState(false)
