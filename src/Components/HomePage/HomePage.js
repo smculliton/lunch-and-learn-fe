@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
-import Header from '../Header/Header'
+import './_HomePage.css'
 
 function HomePage() {
   const [search, setSearch] = useState('')
@@ -23,19 +22,22 @@ function HomePage() {
   }
 
   return (
-    <div>
-      {/* <Header /> */}
-      <label>
-        Search:
-        <input 
-          type="text" 
-          name="search" 
-          value={search}
-          onChange={handleChange}
-          onKeyDown={event => handleKeyDown(event)}
-        />
-      </label>
-      <Link to={`/search/${search}`}><button>Submit</button></Link>
+    <div className='container'>
+      
+      <div>
+        <label>
+          Search Recipes by Country:
+          <input 
+            type="text" 
+            name="search" 
+            value={search}
+            onChange={handleChange}
+            onKeyDown={event => handleKeyDown(event)}
+          />
+        </label>
+        <Link to={`/search/${search}`}><button>Submit</button></Link>
+      </div>
+
     </div>
   );
 }

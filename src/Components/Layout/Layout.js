@@ -11,8 +11,7 @@ function Layout() {
       <div 
         style={{ backgroundImage: `linear-gradient(to bottom, transparent 0%, #000000bd 70%, #000000 95%), url(${background})`,
           backgroundSize: 'cover',
-          // backgroundAttachment: 'fixed',
-          height: '90vh'
+          height: '90vh',
         }}
       >
         <Outlet />
