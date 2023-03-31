@@ -29,13 +29,15 @@ function HomePage() {
           Search Recipes by Country:
           <input 
             type="text" 
-            name="search" 
+            name="search"
+            placeholder="'Germany', e.g."
             value={search}
             onChange={handleChange}
             onKeyDown={event => handleKeyDown(event)}
           />
         </label>
-        <Link to={`/search/${search}`}><button>Submit</button></Link>
+        <Link to={`/search/${search}`}><button>Find Recipes</button></Link>
+        <Link to={`/search/random`}><button>Pick a Country For Me!</button></Link>
       </div>
 
     </div>

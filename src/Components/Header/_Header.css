@@ -2,8 +2,6 @@ header {
   display: flex;
   align-items: left;
   background-color: #EBE9D6;
-}
-
-img {
+  padding-left: 3vw;
   height: 15vh;
 }
