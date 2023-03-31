@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  align-items: left;
+  background-color: #EBE9D6;
+}
+
+img {
+  height: 15vh;
+}

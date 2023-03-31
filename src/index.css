@@ -1,11 +1,11 @@
 body {
   font-family: Helvetica, sans-serif;
-  background-color: #000000;
-  color: rgb(217, 214, 196);
+  background-color: black;
+  color:#EBE9D6;
   text-align: center;
   margin: 0px;
 }
 
 a {
-  color: green;
+  color: black;
 }
