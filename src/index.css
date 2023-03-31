@@ -1,7 +1,61 @@
 body {
   font-family: Helvetica, sans-serif;
-  background-color: rgb(33,33,33);
-  color: rgb(217, 214, 196);
+  background-color: black;
+  color:#EBE9D6;
   text-align: center;
   margin: 0px;
+}
+
+a {
+  color: black;
+}
+
+input[type=text] {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 3px;
+  width: 30vw;
+  background-color: #EBE9D6;
+  border: 2px solid #EBE9D6;
+}
+
+button {
+  appearance: none;
+  background-color: #EBE9D6;
+  border: 2px solid #EBE9D6;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  margin: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }

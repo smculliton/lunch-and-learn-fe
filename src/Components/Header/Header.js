@@ -1,13 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import './_Header.css'
+import logo from '../../images/logo.png'
 
 const Header = () => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/')
+  }
+
   return(
-    <>
-      <h1>Lunch and Learn</h1>
-      <Link to='/'>Home</Link> | <Link to='/register'>Register</Link> | <Link to='/login'>Login</Link>
+    <header>
+      <img 
+        src={logo} 
+        onClick={handleClick}
+      />
       <br/>
-    </>
+    </header>
   )
 }
 

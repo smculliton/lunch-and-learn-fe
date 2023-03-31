@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-import savedTrue from '../../images/starred.png'
-import savedFalse from '../../images/unstarredDark.png'
+import { AiOutlineStar } from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai'
+import { FaBeer } from 'react-icons/fa'
+
+import './_RecipeCard.css'
 
 function RecipeCard({info}) {
   const [saved, setSaved] = useState(false)
@@ -12,15 +15,17 @@ function RecipeCard({info}) {
   return (
     <div>
       <h2>
-        <img src={info.image} alt={info.country}/>
-        <br />
-        <a href={info.url}>
-          {info.title}
-        </a>
-        <img 
-          src={saved ? savedTrue : savedFalse}
-          onClick={toggleSaved}
-        />
+        <div className='recipe-container'>
+          <div onClick={toggleSaved} className='favorite-star'>
+            {saved ? <AiFillStar size='2em'/> : <AiOutlineStar size='2em'/>}
+          </div>
+          <img src={info.image} alt={info.country}/>
+          <div>
+            <a href={info.url}>
+              {info.title}
+            </a>
+          </div>
+        </div>  
       </h2>
     </div>
   )
