@@ -1,0 +1,32 @@
+.img-container {
+  position: relative;
+  display: flex;
+}
+
+.tile-img {
+  height: 50vh;
+  padding: .5rem
+}
+
+.tile-img-hover {
+  height: 50vh;
+  padding: .5rem;
+  filter: brightness(50%);
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.698);
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  animation: fadeIn .5s;
+}
+
+.overlay-text {
+  cursor: default;
+  animation: fadeIn .5s;
+}

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import YoutubeEmbed from "../YoutubeEmbed/YoutubeEmbed";
+import CountryImage from "../CountryImage/CountryImage";
+
+import './_LearningPage.css'
 
 function LearningPage() {
   const { keyword } = useParams()
   const [video, setVideo] = useState({})
   const [images, setImages] = useState([])
-  const [caption, setCaption] = useState('')
   const formattedKeyword = keyword[0].toUpperCase() + keyword.slice(1).toLowerCase()
 
   useEffect(() => {
@@ -15,14 +17,19 @@ function LearningPage() {
       .then(data => {
         setVideo(data.data.attributes.video)
         setImages(data.data.attributes.images.map((image, i) =>
-          <img 
-            src={image.url} 
-            alt={image.alt_tag} 
-            height="400vh" 
-            key={i} 
-            onMouseEnter={event => setCaption(event.target.alt)}
-            onMouseLeave={() => setCaption('')}
-          />
+        <CountryImage 
+          srcUrl={image.url}
+          altText={image.alt_tag}
+          key={i}
+        />
+          // <img 
+          //   src={image.url} 
+          //   alt={image.alt_tag} 
+          //   height="400vh" 
+          //   key={i} 
+          //   onMouseEnter={event => setCaption(event.target.alt)}
+          //   onMouseLeave={() => setCaption('')}
+          // />
           // TODO: refactor images into own component, add hover functionality
         ))
       })
@@ -33,9 +40,9 @@ function LearningPage() {
       <h1>{formattedKeyword}</h1>
       <YoutubeEmbed embedId={video.youtube_video_id}/>
       <h2>Images of {formattedKeyword}</h2>
-      {caption}
-      <br></br>
-      {images}
+      <div class='img-container'>
+        {images}
+      </div>
     </>
   )
 
