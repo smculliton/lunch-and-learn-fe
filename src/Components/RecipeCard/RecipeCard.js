@@ -19,7 +19,7 @@ function RecipeCard({info}) {
       <div onClick={toggleSaved} className='favorite-star'>
         {saved ? <MdStar size='3em' /> : <MdStarBorder size='3em'/>}
       </div>
-      <div className='img-container'>
+      <div className='recipe-img-container'>
         <img className='recipe-img' src={info.image} alt={info.country}/>
         <a className='recipe-text' href={info.url}>
           {info.title}

@@ -1,11 +1,13 @@
 .img-container {
   position: relative;
   display: flex;
+  border-radius: 5px;
+  margin: .5rem;
 }
 
 .tile-img {
   height: 50vh;
-  padding: .5rem
+  border-radius: 5px;
 }
 
 .tile-img-hover {
@@ -23,10 +25,10 @@
   z-index: 10;
   height: 100%;
   width: 100%;
-  animation: fadeIn .5s;
+  animation: fadeIn .3s;
 }
 
 .overlay-text {
   cursor: default;
-  animation: fadeIn .5s;
+  animation: fadeIn .3s;
 }

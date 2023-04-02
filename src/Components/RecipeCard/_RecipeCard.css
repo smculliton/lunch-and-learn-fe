@@ -9,7 +9,7 @@
   transform: translateY(-2px);
 }
 
-.img-container {
+.recipe-img-container {
   display: flex;
   align-items: center;
   justify-content:  center;

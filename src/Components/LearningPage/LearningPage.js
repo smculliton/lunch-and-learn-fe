@@ -40,7 +40,7 @@ function LearningPage() {
       <h1>{formattedKeyword}</h1>
       <YoutubeEmbed embedId={video.youtube_video_id}/>
       <h2>Images of {formattedKeyword}</h2>
-      <div class='img-container'>
+      <div class='images-container'>
         {images}
       </div>
     </>
