@@ -7,28 +7,26 @@
 .recipe-container:hover {
   box-shadow: 0 16px 16px 0 rgba(0,0,0,0.7);
   transform: translateY(-2px);
+  filter: brightness(125%);
 }
 
 .recipe-img-container {
   display: flex;
   align-items: center;
-  justify-content:  center;
+  justify-content: center;
   width: 20rem;
   background-color: beige;
   border-radius: 5px;
 }
 
 .recipe-img { 
-  filter: brightness(50%);
+  filter: brightness(55%);
   width: inherit;
   border-radius: 5px;
 }
 
-.recipe-img:hover {
-  filter: brightness(60%)
-}
-
 .recipe-text {
+  width: inherit;
   position: absolute;
   z-index: 10;
   color: #EBE9D6;
@@ -42,6 +40,7 @@
   cursor: pointer;
   z-index: 5;
   color: gold;
+  filter: brightness(80%);
 }
 
 /* .favorite-star:hover {
