@@ -1,6 +1,6 @@
-.search-container {
-  margin-top: 1.5rem;
+.images-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
