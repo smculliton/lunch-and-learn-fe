@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { AiOutlineStar } from 'react-icons/ai'
-import { AiFillStar } from 'react-icons/ai'
 
 import { MdStar } from 'react-icons/md'
 import { MdStarBorder } from 'react-icons/md'

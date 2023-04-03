@@ -1,0 +1,43 @@
+.favorite-container {
+  display: flex;
+  background-color: rgb(0,0,0,0.6);
+  justify-content: left;
+  align-items: center;
+  height: 20vh;
+  width: 75vw;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.favorite-container:hover {
+  filter: brightness(107%);
+  background-color: rgb(0,0,0,0.7)
+}
+
+.favorite-image {
+  height: 20vh;
+  border-radius: 5px
+}
+
+.favorite-info {
+  width: 55vw;
+}
+
+.favorite-info a {
+  color: #EBE9D6;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.favorite-info a:hover {
+  filter: brightness(90%);
+}
+
+.trashcan {
+  color: #A8C082;
+}
+
+.trashcan:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}

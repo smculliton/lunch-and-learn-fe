@@ -26,9 +26,6 @@ function SearchPage() {
       })
   }, [url])
 
-  // console.log(country)
-  // console.log(results)
-
   return (
     <div>
       <h1>{country} Recipes</h1>
