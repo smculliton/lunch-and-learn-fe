@@ -20,6 +20,7 @@ function SearchPage() {
           data.data.map((ele, i) => <RecipeCard info={ele.attributes} key={i}/>)
         )
         setCountry(
+          // TODO: fix this capitalization for multi-word countries
           data.data[0].attributes.country[0].toUpperCase() + data.data[0].attributes.country.slice(1).toLowerCase()
         )
       })
