@@ -29,6 +29,7 @@
 }
 
 .overlay-text {
+  color: #EBE9D6;
   cursor: default;
   animation: fadeIn .3s;
 }

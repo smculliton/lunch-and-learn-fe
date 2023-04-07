@@ -16,7 +16,7 @@ const Header = () => {
         src={logo} 
         onClick={handleClick}
       />
-      <br/>
+      <p>Logged in as Guest</p>
     </header>
   )
 }

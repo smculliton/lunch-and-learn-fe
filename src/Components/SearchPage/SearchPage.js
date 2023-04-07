@@ -13,7 +13,6 @@ function SearchPage() {
   const url = keyword === 'random' ? 'http://localhost:4000/api/v1/recipes' : `http://localhost:4000/api/v1/recipes?country=${keyword}`
   
   useEffect(() => {
-    
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -21,13 +20,11 @@ function SearchPage() {
           data.data.map((ele, i) => <RecipeCard info={ele.attributes} key={i}/>)
         )
         setCountry(
+          // TODO: fix this capitalization for multi-word countries
           data.data[0].attributes.country[0].toUpperCase() + data.data[0].attributes.country.slice(1).toLowerCase()
         )
       })
   }, [url])
-
-  // console.log(country)
-  // console.log(results)
 
   return (
     <div>
