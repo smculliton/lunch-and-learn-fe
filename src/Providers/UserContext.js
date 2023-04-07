@@ -19,7 +19,7 @@ export function UserProvider({ children }) {
       .then(response => response.json())
       .then(data => {
         setUser(
-          data.data.map((ele, i) => ele.attributes)
+          data.data.map((ele, i) => ({id:ele.id, ...ele.attributes}))
         )
       })
   }

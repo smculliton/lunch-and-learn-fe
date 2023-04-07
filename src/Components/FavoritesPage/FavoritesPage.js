@@ -13,8 +13,6 @@ function FavoritesPage() {
     updateUser()
   }, [])
 
-  console.log(userFavorites)
-
   const favorites = userFavorites.map((ele, i) => <FavoriteCard info={ele} key={i} />)
 
   return (

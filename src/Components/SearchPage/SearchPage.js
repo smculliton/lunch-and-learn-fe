@@ -13,7 +13,6 @@ function SearchPage() {
   const url = keyword === 'random' ? 'http://localhost:4000/api/v1/recipes' : `http://localhost:4000/api/v1/recipes?country=${keyword}`
   
   useEffect(() => {
-    
     fetch(url)
       .then(response => response.json())
       .then(data => {

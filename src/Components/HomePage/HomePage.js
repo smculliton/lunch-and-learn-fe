@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useUpdateUser } from '../../Providers/UserContext'
 import './_HomePage.css'
 
 function HomePage() {
   const [search, setSearch] = useState('')
   const navigate = useNavigate()
+  const updateUser = useUpdateUser()
+
+  useEffect(() => {
+  updateUser()    
+  }, [])
 
   const handleChange = (e) => {
     setSearch(e.target.value)

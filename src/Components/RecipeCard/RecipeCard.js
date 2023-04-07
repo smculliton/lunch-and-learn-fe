@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useUser, useUpdateUser } from '../../Providers/UserContext'
 
 import { MdStar } from 'react-icons/md'
 import { MdStarBorder } from 'react-icons/md'
@@ -6,10 +7,46 @@ import { MdStarBorder } from 'react-icons/md'
 import './_RecipeCard.css'
 
 function RecipeCard({info}) {
-  const [saved, setSaved] = useState(false)
+  const userFavorites = useUser()
+  const updateUser = useUpdateUser()
+  const [saved, setSaved] = useState({})
+
+  useEffect(() => {
+    setSaved(userFavorites.find(element => element.recipe_link === info.url))
+  })
 
   const toggleSaved = () => {
-    setSaved(!saved)
+    saved ? handleRemoveFavorite() : handleAddFavorite()
+  }
+
+  const handleRemoveFavorite = () => {
+    console.log('removed!')
+    const params = new URLSearchParams({api_key: 'guest_api_key', favorite_id: saved.id})
+
+    fetch('http://localhost:4000/api/v1/favorites?' + params, { method: 'DELETE'})
+      .then(response => updateUser()
+    )
+  }
+
+  const handleAddFavorite = () => {
+    console.log('added!')
+    const body = {
+      api_key: 'guest_api_key',
+      country: info.country,
+      recipe_link: info.url,
+      recipe_title: info.title,
+      image_url: info.image
+    }
+
+    fetch('http://localhost:4000/api/v1/favorites', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(response => updateUser())    
   }
 
   return (
