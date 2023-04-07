@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
 import FavoriteCard from '../FavoriteCard/FavoriteCard'
+
+import { useUser, useUpdateUser } from '../../Providers/UserContext'
 
 import './_FavoritesPage.css'
 
 function FavoritesPage() {
-  const [favorites, setFavorites] = useState([])
-  
-  useEffect(() => { 
-    fetch('http://localhost:4000/api/v1/favorites?api_key=guest_api_key')
-      .then(response => response.json())
-      .then(data => {
-        setFavorites(
-          data.data.map((ele, i) => <FavoriteCard info={ele.attributes} key={i} />)
-        )
-      })
+  const userFavorites = useUser()
+  const updateUser = useUpdateUser()
+
+  useEffect(() => {
+    updateUser()
   }, [])
+
+  console.log(userFavorites)
+
+  const favorites = userFavorites.map((ele, i) => <FavoriteCard info={ele} key={i} />)
 
   return (
     <div className='favorites'>
