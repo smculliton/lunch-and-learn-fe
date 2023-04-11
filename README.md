@@ -1,3 +1,1 @@
-TO DO 
-- Implement login functionality
-- Add favorites page
+Deployed: https://lunch-and-learn-fe.vercel.app/

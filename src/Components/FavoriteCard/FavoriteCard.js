@@ -21,6 +21,7 @@ function FavoriteCard({info}) {
 
   return (
     <div className='favorite-container'>
+      {/* TODO: image_urls expire after a certain amount of time */}
       <img src={info.image_url} className='favorite-image' />
       <div className='favorite-info'>
         <h2>{info.recipe_title}</h2>
