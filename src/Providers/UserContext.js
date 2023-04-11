@@ -15,7 +15,7 @@ export function UserProvider({ children }) {
   const [user, setUser] = useState([])
 
   const updateUser = () => {
-    fetch('http://localhost:4000/api/v1/favorites?api_key=guest_api_key')
+    fetch(process.env.REACT_APP_BASE_URL + '/api/v1/favorites?api_key=guest_api_key')
       .then(response => response.json())
       .then(data => {
         setUser(
