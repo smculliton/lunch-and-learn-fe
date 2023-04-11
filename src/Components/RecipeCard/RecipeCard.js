@@ -23,7 +23,7 @@ function RecipeCard({info}) {
     console.log('removed!')
     const params = new URLSearchParams({api_key: 'guest_api_key', favorite_id: saved.id})
 
-    fetch('http://localhost:4000/api/v1/favorites?' + params, { method: 'DELETE'})
+    fetch(process.env.REACT_APP_BASE_URL + '/api/v1/favorites?' + params, { method: 'DELETE'})
       .then(response => updateUser()
     )
   }
@@ -38,7 +38,7 @@ function RecipeCard({info}) {
       image_url: info.image
     }
 
-    fetch('http://localhost:4000/api/v1/favorites', {
+    fetch(process.env.REACT_APP_BASE_URL + '/api/v1/favorites', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

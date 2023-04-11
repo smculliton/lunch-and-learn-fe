@@ -12,7 +12,7 @@ function LearningPage() {
   const formattedKeyword = keyword[0].toUpperCase() + keyword.slice(1).toLowerCase()
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/v1/learning_resources?country=${keyword}`)
+    fetch(process.env.REACT_APP_BASE_URL + `/api/v1/learning_resources?country=${keyword}`)
       .then(response => response.json())
       .then(data => {
         setVideo(data.data.attributes.video)

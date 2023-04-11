@@ -10,7 +10,7 @@ function SearchPage() {
   const [country, setCountry] = useState([])
   const { keyword } = useParams()
 
-  const url = keyword === 'random' ? 'http://localhost:4000/api/v1/recipes' : `http://localhost:4000/api/v1/recipes?country=${keyword}`
+  const url = keyword === 'random' ? process.env.REACT_APP_BASE_URL + '/api/v1/recipes' : process.env.REACT_APP_BASE_URL + `/api/v1/recipes?country=${keyword}`
   
   useEffect(() => {
     fetch(url)

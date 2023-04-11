@@ -15,12 +15,13 @@ function FavoriteCard({info}) {
     console.log('removed!')
     const params = new URLSearchParams({api_key: 'guest_api_key', favorite_id: info.id})
 
-    fetch('http://localhost:4000/api/v1/favorites?' + params, { method: 'DELETE'})
+    fetch(process.env.REACT_APP_BASE_URL + '/api/v1/favorites?' + params, { method: 'DELETE'})
       .then(response => updateUser())
   }
 
   return (
     <div className='favorite-container'>
+      {/* TODO: image_urls expire after a certain amount of time */}
       <img src={info.image_url} className='favorite-image' />
       <div className='favorite-info'>
         <h2>{info.recipe_title}</h2>
