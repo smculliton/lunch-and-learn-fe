@@ -19,7 +19,7 @@ Lunch and Learn is an educational recipe app that aims to bring cuisine closer t
 ## Installation
 1. Clone the FE repo
   ```sh
-  git clone git@github.com:streamr-turing/streamr-fe.git
+  git clone git@github.com:smculliton/lunch-and-learn-fe.git
   ```
 2. Install NPM packages
   ```sh
