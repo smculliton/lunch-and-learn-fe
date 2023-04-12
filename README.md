@@ -1,3 +1,5 @@
+<img width="364" alt="Screen Shot 2023-04-12 at 1 26 04 PM" src="https://user-images.githubusercontent.com/108320490/231563963-278e19b2-e6b3-4d51-8122-a62de965cb74.png">
+
 # Deployed Site
 [Lunch and Learn](https://lunch-and-learn-fe.vercel.app/)
 
@@ -26,6 +28,12 @@ Lunch and Learn is an educational recipe app that aims to bring cuisine closer t
   npm install
   npm start
   ```
+  
+## Preview
+
+![lunch_and_learn_1_AdobeExpress](https://user-images.githubusercontent.com/108320490/231567204-0c023530-028e-47b9-9af1-ff07e6fc79a3.gif)
+
+
   
 ## Future Extensions
 - Register New User and Login/ Logout capabilities
