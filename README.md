@@ -3,6 +3,9 @@
 # Deployed Site
 [Lunch and Learn](https://lunch-and-learn-fe.vercel.app/)
 
+## Back End Repo
+[Lunch and Learn BE Github](https://github.com/smculliton/lunch_and_learn)
+
 ## About The Project
 
 Lunch and Learn is an educational recipe app that aims to bring cuisine closer to the culture it came from. A user can search for recipes from a specific country, or take a suggestion from the app. Then, the app will display the recipes and link the user to learning resources, including videos and pictures about the country that those recipes came from. Users can also add and remove recipes to their favorites.
@@ -31,10 +34,16 @@ Lunch and Learn is an educational recipe app that aims to bring cuisine closer t
   
 ## Preview
 
+Search <br>
 ![lunch_and_learn_1_AdobeExpress](https://user-images.githubusercontent.com/108320490/231567204-0c023530-028e-47b9-9af1-ff07e6fc79a3.gif)
 
+Favoriting <br>
+![lunch_and_learn_2_AdobeExpress](https://user-images.githubusercontent.com/108320490/231569470-9ec5d627-31b5-4ee9-b07c-9f6c9cc0a874.gif)
 
-  
+Learning Resources <br>
+![lunch_and_learn_3_AdobeExpress](https://user-images.githubusercontent.com/108320490/231569483-3abf4853-7768-4581-883f-c6dc8415426e.gif)
+
+
 ## Future Extensions
 - Register New User and Login/ Logout capabilities
 - Bug fixes
