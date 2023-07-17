@@ -59,3 +59,7 @@ button:active {
   box-shadow: none;
   transform: translateY(0);
 }
+
+.disabled-link {
+  pointer-events: none;
+}
