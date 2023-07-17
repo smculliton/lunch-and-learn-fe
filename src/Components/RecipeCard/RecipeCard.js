@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useUser, useUpdateUser } from '../../Providers/UserContext'
 
+import logo from '../../images/logo2.png'
 import { MdStar } from 'react-icons/md'
 import { MdStarBorder } from 'react-icons/md'
 
@@ -49,13 +50,18 @@ function RecipeCard({info}) {
       .then(response => updateUser())    
   }
 
+  const handleError = (e) => {
+    e.target.onerror = null
+    e.target.src = logo
+  }
+
   return (
     <div className='recipe-container'>
       <div onClick={toggleSaved} className='favorite-star'>
         {saved ? <MdStar size='3em' /> : <MdStarBorder size='3em'/>}
       </div>
       <div className='recipe-img-container'>
-        <img className='recipe-img' src={info.image} alt={info.country}/>
+        <img className='recipe-img' src={info.image} alt={info.country} onError={handleError}/>
         <a className='recipe-text' href={info.url}>
           {info.title}
         </a>
